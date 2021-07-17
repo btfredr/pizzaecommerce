@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 
-export const SidebarContainer = styled.div`
+export const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
   width: 350px;
@@ -13,7 +13,6 @@ export const SidebarContainer = styled.div`
   top: 0;
   transition: 0.3s ease-in-out;
   right: ${({ isOpen }) => (isOpen ? "0" : "-1000px")};
-
   @media screen and (max-width: 400px) {
     width: 100%;
   }
@@ -36,12 +35,11 @@ export const Icon = styled.div`
 
 export const SidebarMenu = styled.div`
   display: grid;
-  grid-template-columns; 1fr;
-  grid-template-row: repeat(3, 80px);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 80px);
   text-align: center;
-
   @media screen and (max-width: 480px) {
-      grid-template-rows: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
   }
 `;
 
@@ -55,7 +53,6 @@ export const SidebarLink = styled(Link)`
   transition: 0.2s ease-in-out;
   color: #000;
   cursor: pointer;
-
   &:hover {
     color: #e31837;
     transition: 0.2s ease-in-out;
@@ -78,7 +75,6 @@ export const SidebarRoute = styled(Link)`
   cursor: pointer;
   transition: 0.2s ease-in-out;
   text-decoration: none;
-
   &:hover {
     transition: 0.2s ease-in-out;
     background: #fff;
