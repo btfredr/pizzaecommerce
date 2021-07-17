@@ -1,5 +1,13 @@
+import { Nav, NavLink } from "./NavbarElements";
+
 const Navbar = () => {
-  return <div></div>;
+  return (
+    <>
+      <Nav>
+        <NavLink to="/">Pizza</NavLink>
+      </Nav>
+    </>
+  );
 };
 
 export default Navbar;
